@@ -11,7 +11,7 @@ try {
     include: [
       {
         model: Product,
-        attributes: ['product_name, price, stock, category_id'],
+        // attributes: ['product_name, price, stock, category_id'],
       },
     ],
   });
@@ -30,7 +30,7 @@ router.get('/:id', async (req, res) => {
       include: [
         {
           model: Product,
-          attributes: ['product_name, price, stock, category_id'],
+          // attributes: ['product_name, price, stock, category_id'],
         },
       ],
     });
@@ -47,21 +47,53 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
   // create a new tag
-  try {} catch (err) {
+  try {
+    const tagData = await Tag.create(req.body);
+    res.status(200).json(tagData);
+
+
+  } catch (err) {
     res.status(500).json(err)
   }
 });
 
 router.put('/:id', async (req, res) => {
   // update a tag's name by its `id` value
-  try {} catch (err) {
+  try {
+    const tagData = await Tag.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (!tagData[0]) {
+      res.status(404).json({ message: `No Tag with ID ${req.params.id} found!` });
+      return;
+    }
+    res.status(200).json(tagData);
+
+
+  } catch (err) {
     res.status(500).json(err)
   }
 });
 
 router.delete('/:id', async (req, res) => {
   // delete on tag by its `id` value
-  try {} catch (err) {
+  try {
+    const tagData = await Tag.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (!tagData) {
+      res.status(404).json({ message: `No Tag with ID ${req.params.id} found` });
+      return;
+    }
+    res.status(204).json(tagData);
+
+
+
+  } catch (err) {
     res.status(500).json(err)
   }
 });
