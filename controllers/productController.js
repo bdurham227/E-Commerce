@@ -1,6 +1,6 @@
 const { Product, Category, Tag, ProductTag } = require('../models');
 
-
+//------(GET REQUEST)------GET ALL PRODUCTS------------
 exports.getAllProducts = async (req, res) => {
     // find all products
     // be sure to include its associated Category and Tag data
@@ -24,7 +24,7 @@ exports.getAllProducts = async (req, res) => {
     }
   };
   
-  
+  //--------(GET REQUEST)--------GET PRODUCT BY ID--------------
   exports.getProduct = async (req, res) => {
     // find a single product by its `id`
     // be sure to include its associated Category and Tag data
@@ -55,7 +55,7 @@ exports.getAllProducts = async (req, res) => {
     }
   }
   
-  
+  //----(POST REQUEST)-----CREATE PRODUCT---------
   exports.createProduct = (req, res) => {
     /* req.body should look like this...
       {
@@ -87,6 +87,7 @@ exports.getAllProducts = async (req, res) => {
       });
   };
   
+  //----(PUT REQUEST)----UPDATE PRODUCT BY ID---------
   exports.updateProduct = (req, res) => {
     // update product data
     Product.update(req.body, {
@@ -129,7 +130,8 @@ exports.getAllProducts = async (req, res) => {
         res.status(400).json(err);
       });
   }
-  
+  //-----(DELETE REQUEST)----DELETE PRODUCT BY ID-------
+
   exports.deleteProduct =  async (req, res) => {
     // delete one product by its `id` value
     try {

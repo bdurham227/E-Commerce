@@ -1,5 +1,7 @@
 const { Category, Product } = require("../models");
 
+//------(GET REQUEST)------GET ALL CATEGORY------------
+
 exports.getAllCategories =  async (req, res) => {
     try {
       const categtoryData = await Category.findAll({
@@ -17,6 +19,8 @@ exports.getAllCategories =  async (req, res) => {
     }
   };
   
+  //--------(GET REQUEST)--------GET CATEGORY BY ID--------------
+
   exports.getCategory = async (req, res) => {
     try {
       const categoryData = await Category.findOne({
@@ -40,7 +44,9 @@ exports.getAllCategories =  async (req, res) => {
       res.status(500).json(err);
     }
   };
-  
+
+  //----(POST REQUEST)-----CREATE CATEGORY---------------------
+
   exports.createCategory = async (req, res) => {
     try {
       const categoryData = await Category.create({
@@ -52,6 +58,7 @@ exports.getAllCategories =  async (req, res) => {
     }
   };
   
+  //----(PUT REQUEST)----UPDATE CATEGORY BY ID---------------
   
   exports.updateCategory = async (req, res) => {
     // update a category by its `id` value
@@ -72,7 +79,8 @@ exports.getAllCategories =  async (req, res) => {
       res.status(500).json(err);
     }
   };
-  
+   //-----(DELETE REQUEST)----DELETE CATEGORY BY ID-------
+
   exports.deleteCategory = async (req, res) => {
     // delete a category by its `id` value
     try {

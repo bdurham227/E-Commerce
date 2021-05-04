@@ -3,6 +3,7 @@ const router = require('express').Router();
 const productController = require('../../controllers/productController');
 // The `/api/products` endpoint
 
+//mounting routers
 router
 .get('/', productController.getAllProducts)
 .post('/', productController.createProduct)

@@ -2,12 +2,14 @@ const router = require("express").Router();
 const { sequelize } = require("../../models/Product");
 // const { getAllCategories, getCategory, createCategory, updateCategory, deleteCategory } = require('../../controllers/categoryControllers');
 const categoryController = require('../../controllers/categoryControllers');
-// The `/api/categories` endpoint
 
+
+
+// The `/api/categories` endpoint
 //   // find all categories
 //   // be sure to include its associated Products
 
-
+//mounting routers
 router
 .get('/', categoryController.getAllCategories)
 .post('/', categoryController.createCategory)
