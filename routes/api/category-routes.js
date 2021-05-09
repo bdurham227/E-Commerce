@@ -5,6 +5,7 @@ const categoryController = require('../../controllers/categoryControllers');
 
 
 
+
 // The `/api/categories` endpoint
 //   // find all categories
 //   // be sure to include its associated Products
@@ -23,6 +24,9 @@ router
 
 
 //-----------------GET ALL CATEGORIES
+
+
+
 
 // router.get("/", async (req, res) => {
 //   try {

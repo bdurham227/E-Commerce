@@ -16,7 +16,12 @@ exports.getAllProducts = async (req, res) => {
             model: Tag,
             attributes: ['id', 'tag_name'],
           }
+        
         ],
+        // through: {
+        //   model: Tag,
+        //   as: "tag_details"
+        // }
      });
       res.status(200).json(productData);
     } catch (err) {
@@ -33,15 +38,15 @@ exports.getAllProducts = async (req, res) => {
         where: {
           id: req.params.id,
         },
-        attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
+        attributes: ['product_name', 'price', 'stock', 'category_id'],
         include: [
         { 
           model: Category,
-          attributes: ['id', 'category_name'],
+          attributes: ['category_name'],
         }, 
         { 
           model: Tag,
-          attributes: ['id', 'tag_name'],
+          attributes: ['tag_name'],
          },
         ],
       });

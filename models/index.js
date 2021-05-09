@@ -20,7 +20,7 @@ Product.belongsToMany(Tag, {
   through: {
     model: ProductTag,
   },
-  foreignKey: 'product_id'
+  foreignKey: 'product_id',
   
 })
 

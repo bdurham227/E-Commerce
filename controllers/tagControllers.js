@@ -6,11 +6,12 @@ exports.getAllTags = async (req, res) => {
     // be sure to include its associated Product data
     try {
       const tagData = await Tag.findAll({
-        attributes: ["id", "tag_name"],
+        attributes: ["id", "tag_name" ],
         include: [
           {
             model: Product,
             attributes: ["product_name", "price", "stock", "category_id"],
+           
           },
         ],
       });
