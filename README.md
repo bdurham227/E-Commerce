@@ -15,7 +15,7 @@
 -----
 
 ## Description
- The Team Profile Generator Application is a command line app that generates a Team Profile. This applicaton uses npm inquirer and jest packages to prompt for user inputs and then dynamically creates and renders a html file with their respones. This project uses Object Oriented Programming and Test Driven Development as it's foundation. This application enabled me to build upon and practice my knowledge in the prototype chain and polymorphism. Each class.js file has a corresponding test.js file that pass all tests. This project helped me learn and practice the principles of Object Oriented Programming and Test Driven Development
+The E-Commerce Database application is an ORM or Object Relational Mapping application that is built for a mock E-Commere website. The application's platform is a configured Express.JS API that uses Sequelize to interact with our MySQL database. The process for development was to first analyze and map out our database, build Models for our SQL Data, build our associations or relationships that our Models have with one another, seed our database and finally construct our API requests. This application was lot of fun to build out. It builds upon previous projects that culminates just to the point of being a fullstack application. Further developments I would like to see for this app is to build out the front end using MVC to complete our backend to frontend relationship!
 
  -----
 
@@ -67,26 +67,37 @@ Seed the Database:
    nodemon server.js
 ```
 
-<iframe src="https://drive.google.com/file/d/1JCOlDG3h0JEI6v0GaQSnD_xII086Ak8z/preview" width="640" height="480"></iframe>
+
 
    
 Click To Watch Walkthrough video: 
-
-
-
-[![IMAGE ALT TEXT](images/teamvideoscreenshot.png)](https://drive.google.com/file/d/1aoNEfzJqW8l4CSBRbfoBA1R3RciC7Cgw/view "Video title")
-
-
-
-
-
-Screenshot of Application in Command:
 --
-![Screenshot](images/teamprofilenode.png)
 
-Screenshot of Application in Browswer:
+
+[![IMAGE ALT TEXT](images/ecomthree.png)](https://drive.google.com/file/d/1JCOlDG3h0JEI6v0GaQSnD_xII086Ak8z/preview "Video title")
+
+
+
+
+GIF of Requests in Insomnia:
 --
-![Screenshot](images/taemprofilwith4screenshot.png)
+
+![DEMO](images/ecomgif.gif)
+
+
+
+
+
+
+Screenshot of Application in Insomnia:
+--
+![Screenshot](images/ecomthree.png)
+
+Screenshot of Database in MYSQL Workbench:
+--
+![Screenshot](images/ecomone.png)
+
+![Screenshot](images/ecomtwo.png)
 
 
 
